@@ -76,3 +76,5 @@ print("Program Studi   : S1 Teknologi Informasi")
 print("Dosen Wali      : Dr. Andi Suhendra, M.Kom.")
 print("====================================================================")
 print("KRS berhasil dicetak. Selamat belajar!")
+
+tes 123
