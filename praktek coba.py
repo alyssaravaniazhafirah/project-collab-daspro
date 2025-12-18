@@ -1,78 +1,65 @@
-print("====================================================================")
-print("                  UNIVERSITAS BINA SARANA INFORMATIKA               ")
-print("                     FAKULTAS TEKNIK INFORMATIKA                   ")
-print("                PROGRAM STUDI S1 TEKNOLOGI INFORMASI               ")
-print("====================================================================")
-print("                         KARTU RENCANA STUDI (KRS)                 ")
-print("                       SEMESTER : Ganjil 2024/2025                 ")
-print("====================================================================")
+print("              Invoice Tagihan             ")
 
-print("|                        IDENTITAS MAHASISWA                       |")
-print("--------------------------------------------------------------------")
-nim = input("NIM (Nomor Induk Mahasiswa) : ")
-nama = input("Nama Mahasiswa              : ")
-print("--------------------------------------------------------------------")
+tanggal_transaksi = input("Masukkan tanggal transaksi: ")
+nomor_invoice = input("Masukkan nomor invoice: ")
+nama_pembeli = input("Masukkan nama pembeli: ")
+alamat_pembeli = input("Masukkan alamat pembeli: ")
 
-# Daftar mata kuliah sebagai dictionary
-daftar_matkul = {
-    "153": {"nama": "PENGANTAR TEKNOLOGI INFORMASI DAN KOMUNIKASI", "sks": 3, "keterangan": "Wajib"},
-    "712": {"nama": "ENTREPRENEURSHIP", "sks": 3, "keterangan": "Wajib"},
-    "101": {"nama": "PENDIDIKAN PANCASILA", "sks": 2, "keterangan": "Wajib"},
-    "894": {"nama": "DASAR PEMROGRAMAN", "sks": 4, "keterangan": "Wajib"},
-    "104": {"nama": "BAHASA INGGRIS I", "sks": 2, "keterangan": "Pilihan"},
-    "207": {"nama": "LOGIKA DAN ALGORITMA", "sks": 4, "keterangan": "Wajib"}
-}
+def garis():
+    print("_" * 75)
 
-print("|                    DAFTAR MATA KULIAH TERSEDIA                   |")
-print("--------------------------------------------------------------------")
-print("| Kode | Nama Mata Kuliah                     | SKS | Keterangan   |")
-print("|------|--------------------------------------|-----|--------------|")
-for kode, matkul in daftar_matkul.items():
-    print(f"| {kode:<4} | {matkul['nama']:<36} | {matkul['sks']:<3} | {matkul['keterangan']:<12} |")
-print("--------------------------------------------------------------------")
+print("\nTanggal Transaksi :", tanggal_transaksi)
+print("Nomor Invoice     :", nomor_invoice)
+print("Nama Pembeli      :", nama_pembeli)
+print("Alamat Pembeli    :", alamat_pembeli)
 
-banyak_matkul = int(input("Masukkan banyak mata kuliah yang akan diambil : "))
+# ======================
+# DATA PRODUK (FIX)
+# ======================
+qty1 = 2
+harga1 = 800000
+total1 = qty1 * harga1
 
-# List untuk menyimpan mata kuliah yang diambil
-matkul_diambil = []
+qty2 = 1
+harga2 = 1200000
+total2 = qty2 * harga2
 
-# Input data mata kuliah yang diambil
-for i in range(banyak_matkul):
-    print(f"\nMasukkan data matkul ke-{i+1}:")
-    kode = input("Kode Mata Kuliah (153/712/101/894/104/207): ")
-    kelas = input("Kelas (A/B/C): ")
+# ======================
+# TABEL PRODUK
+# ======================
+garis()
+print("| No | Deskripsi Produk | Kuantitas | Harga Satuan (Rp) | Total Harga (Rp) |")
+garis()
+print(f"| 1  | Printer laserjet |     {qty1}     |   Rp {harga1:,}    |  Rp {total1:,}   |")
+garis()
+print(f"| 2  | Kursi kantor     |     {qty2}     |  Rp {harga2:,}   | Rp {total2:,}   |")
+garis()
 
-    if kode in daftar_matkul:
-        matkul_diambil.append({
-            "kode": kode,
-            "nama": daftar_matkul[kode]["nama"],
-            "sks": daftar_matkul[kode]["sks"],
-            "keterangan": daftar_matkul[kode]["keterangan"],
-            "kelas": kelas
-        })
-    else:
-        print("Kode Mata Kuliah Tidak Dikenal")
+# ======================
+# PERHITUNGAN TOTAL
+# ======================
+subtotal = total1 + total2
+diskon = 0
 
-print("\n====================================================================")
-print("|                    RENCANA STUDI MAHASISWA                       |")
-print("|     (Mata Kuliah yang akan diambil pada semester ini)            |")
-print("--------------------------------------------------------------------")
-print("| Kode | Nama Mata Kuliah                     | SKS | Kelas | Keterangan |")
-print("|------|--------------------------------------|-----|-------|-------------|")
+if subtotal > 2000000:
+    diskon = subtotal * 0.10
 
-total_sks = 0
-for matkul in matkul_diambil:
-    print(f"| {matkul['kode']:<4} | {matkul['nama']:<36} | {matkul['sks']:<3} | {matkul['kelas']:<5} | {matkul['keterangan']:<10} |")
-    total_sks += matkul['sks']
+pajak = (subtotal - diskon) * 0.05
+total_tagihan = subtotal - diskon + pajak
 
-print("--------------------------------------------------------------------")
-print(f"| JUMLAH TOTAL SKS : {total_sks:<3}                                           |")
-print("====================================================================")
+# ======================
+# RINGKASAN TAGIHAN
+# ======================
+print(f"| {'Subtotal':<53} | Rp {subtotal:,.0f} |")
+garis()
+print(f"| {'Diskon 10%':<53} | Rp {diskon:,.0f} |")
+garis()
+print(f"| {'Pajak 5%':<53} | Rp {pajak:,.0f} |")
+garis()
+print(f"| {'Total Tagihan':<53} | Rp {total_tagihan:,.0f} |")
+garis()
 
-print("======================== DATA MAHASISWA ============================")
-print(f"NIM             : {nim}")
-print(f"Nama Mahasiswa  : {nama}")
-print("Program Studi   : S1 Teknologi Informasi")
-print("Dosen Wali      : Dr. Andi Suhendra, M.Kom.")
-print("====================================================================")
-print("KRS berhasil dicetak. Selamat belajar!")
+print("\nCatatan:")
+print("- Diskon 10% diberikan untuk total pembelian di atas Rp2.000.000")
+print("- Pajak 5% dikenakan sesuai peraturan yang berlaku")
+
