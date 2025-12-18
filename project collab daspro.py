@@ -36,3 +36,7 @@ print(f"| {'Pajak 5%':<53} | Rp {pajak:,.0f} |")
 garis()
 print(f"| {'Total Tagihan':<53} | Rp {total_tagihan:,.0f} |")
 garis()
+
+
+print("Catatan:- Diskon 10% diberikan untuk pembelian di atas Rp 2.000.000")
+print("       :- Pajak 5% dikenakan sesuai peraturan yang berlaku")
