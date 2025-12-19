@@ -61,6 +61,7 @@ diskon = hitung_diskon(invoice_subtotal)
 pajak = hitung_pajak(invoice_subtotal - diskon) 
 total_tagihan = hitung_total_tagihan(invoice_subtotal, diskon, pajak) 
 
+<<<<<<< Updated upstream
 #cetak hasil
 print("\n                          Invoice Tagihan                                ")
 print(f"Tanggal Transaksi : {tanggal_transaksi}")
@@ -87,3 +88,5 @@ garis()
 print("Catatan:")
 print("- Diskon 10% berlaku untuk pembelian di atas Rp 2.000.000")
 print("- Pajak 5% dikenakan sesuai peraturan yang berlaku")
+=======
+>>>>>>> Stashed changes
