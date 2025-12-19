@@ -4,5 +4,4 @@ ANGGOTA KELOMPOK PROJECT UAS DASAR PEMROGRAMAN
 3. RAHMA ALFIYYA (17250178)
 4. ANTANIA AGNE QITRI (17250555)
 
-Menggunakan Aplikasi Python untuk coding
-Menggunakan Github untuk collab
+Menggunakan Aplikasi Python untuk coding dan Github untuk collab
