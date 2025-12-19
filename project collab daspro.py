@@ -5,7 +5,6 @@ tanggal_transaksi = input("Masukkan tanggal transaksi: ")
 nomor_invoice = input("Masukkan nomor invoice: ")
 nama_pembeli = input("Masukkan nama pembeli: ")
 alamat_pembeli = input("Masukkan alamat pembeli: ")
-<<<<<<< HEAD
 
 #fungsi
 def garis ():
@@ -88,8 +87,3 @@ garis()
 print("Catatan:")
 print("- Diskon 10% berlaku untuk pembelian di atas Rp 2.000.000")
 print("- Pajak 5% dikenakan sesuai peraturan yang berlaku")
-=======
-# ======================
-# DATA PRODUK
-# ======================
->>>>>>> 802b7688cd3997d671930b1ad838bf4efcfc2c4d
