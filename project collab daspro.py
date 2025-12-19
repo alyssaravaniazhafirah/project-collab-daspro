@@ -35,7 +35,6 @@ garis()
 #input data
 barang= []
 jumlah_barang = int(input("Masukkan jumlah barang yang ingin dibeli: "))
-
 invoice_subtotal = 0 
 
 for i in range(jumlah_barang):
@@ -50,7 +49,7 @@ for i in range(jumlah_barang):
         harga_satuan = 1200000
     else:
         print("Barang tidak tersedia.")
-        continue 
+        continue #skip barang yang tidak tersedia
 
     total_harga_item = hitung_total(kuantitas, harga_satuan) 
     barang.append((nama_barang, kuantitas, harga_satuan, total_harga_item))
@@ -72,6 +71,7 @@ print(f"Alamat Pembeli   : {alamat_pembeli}")
 garis()
 print("| No | Deskripsi Produk | Kuantitas | Harga Satuan (Rp) | Total Harga (Rp) |")
 garis()
+
 for idx, item in enumerate(barang):
     nama, kuantitas, harga_satuan, total_harga = item
     print(f"| {idx+1:<2} | {nama:<16} | {kuantitas:^10} | Rp {harga_satuan:>15,} | Rp {total_harga:>15,} |") 
@@ -85,8 +85,12 @@ garis()
 print(f"|Total Tagihan          : Rp {total_tagihan:,.0f}                              |")
 garis()
 
+#catatan
 print("Catatan:")
 print("- Diskon 10% berlaku untuk pembelian di atas Rp 2.000.000")
 print("- Pajak 5% dikenakan sesuai peraturan yang berlaku")
+<<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> 6645ba784d8726d39d49c56111f9b24ffa9e6726
