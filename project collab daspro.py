@@ -60,7 +60,6 @@ diskon = hitung_diskon(invoice_subtotal)
 pajak = hitung_pajak(invoice_subtotal - diskon) 
 total_tagihan = hitung_total_tagihan(invoice_subtotal, diskon, pajak) 
 
-<<<<<<< Updated upstream
 #cetak hasil
 print("\n                          Invoice Tagihan                                ")
 print(f"Tanggal Transaksi : {tanggal_transaksi}")
@@ -76,21 +75,16 @@ for idx, item in enumerate(barang):
     nama, kuantitas, harga_satuan, total_harga = item
     print(f"| {idx+1:<2} | {nama:<16} | {kuantitas:^10} | Rp {harga_satuan:>15,} | Rp {total_harga:>15,} |") 
 garis()
-print(f"|Subtotal               : Rp {invoice_subtotal:,.0f}                           |") 
+print(f"|Subtotal               : Rp {invoice_subtotal:,.0f}                             |") 
 garis()
-print(f"|Diskon                 : Rp {diskon:,.0f}                                     |")
+print(f"|Diskon                 : Rp {diskon:,.0f}                                       |")
 garis()
-print(f"|Pajak (5%)             : Rp {pajak:,.0f}                                      |")
+print(f"|Pajak (5%)             : Rp {pajak:,.0f}                                        |")
 garis()
-print(f"|Total Tagihan          : Rp {total_tagihan:,.0f}                              |")
+print(f"|Total Tagihan          : Rp {total_tagihan:,.0f}                                |")
 garis()
 
 #catatan
 print("Catatan:")
 print("- Diskon 10% berlaku untuk pembelian di atas Rp 2.000.000")
 print("- Pajak 5% dikenakan sesuai peraturan yang berlaku")
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> 6645ba784d8726d39d49c56111f9b24ffa9e6726
