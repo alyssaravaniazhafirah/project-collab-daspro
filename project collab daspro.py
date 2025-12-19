@@ -84,6 +84,7 @@ garis()
 print(f"|Total Tagihan          : Rp {total_tagihan:,.0f}                              |")
 garis()
 
+#catatan
 print("Catatan:")
 print("- Diskon 10% berlaku untuk pembelian di atas Rp 2.000.000")
 print("- Pajak 5% dikenakan sesuai peraturan yang berlaku")
