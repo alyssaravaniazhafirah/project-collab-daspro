@@ -33,6 +33,7 @@ print("| 1  | Printer laserjet |     1     |    Rp 800.000     |    Rp 800.000  
 print("| 2  | Kursi kantor     |     1     |    Rp 1.200.000   |   Rp 1.200.000   |")
 garis()
 print("| 3  | Meja belajar     |     1     |    Rp 1.750.000   |   Rp 1.750.000   |")
+garis()
 
 #Input Data ke dalam List 
 data_barang = [] 
