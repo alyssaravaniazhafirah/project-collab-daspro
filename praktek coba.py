@@ -32,6 +32,7 @@ garis()
 print("| 1  | Printer laserjet |     1     |    Rp 800.000     |    Rp 800.000    |")
 print("| 2  | Kursi kantor     |     1     |    Rp 1.200.000   |   Rp 1.200.000   |")
 garis()
+print("| 3  | Meja belajar     |     1     |    Rp 1.750.000   |   Rp 1.750.000   |")
 
 #Input Data ke dalam List 
 data_barang = [] 
@@ -39,7 +40,7 @@ jumlah_barang = int(input("Masukkan jumlah barang yang ingin dibeli: "))
 
 for i in range(jumlah_barang):
     print(f"\nBarang ke-{i+1}:")
-    nama_barang = input("Masukkan nama barang (Printer laserjet/Kursi kantor): ")
+    nama_barang = input("Masukkan nama barang (Printer laserjet/Kursi kantor/Meja belajar): ")
     kuantitas = int(input("kuantitas barang: "))
 
     harga_satuan = 0 
@@ -47,6 +48,8 @@ for i in range(jumlah_barang):
         harga_satuan = 800000
     elif nama_barang == "Kursi kantor":
         harga_satuan = 1200000
+    elif nama_barang == "Meja belajar":
+        harga_satuan = 1750000
     else:
         print("Barang tidak tersedia.")
         continue 
