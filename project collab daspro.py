@@ -42,7 +42,6 @@ for i in range(jumlah_barang):
     print(f"\nBarang ke-{i+1}:")
 
     nama_barang = input("Masukkan nama barang (Printer laserjet/Kursi kantor/Meja belajar): ")
-=======
     nama_barang = input("Masukkan nama barang (Printer laserjet/Kursi kantor): ")
 
     kuantitas = int(input("kuantitas barang: "))
