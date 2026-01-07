@@ -31,7 +31,6 @@ print("| No | Deskripsi Produk | Kuantitas | Harga Satuan (Rp) | Total Harga (Rp
 garis()
 print("| 1  | Printer laserjet |     1     |    Rp 800.000     |    Rp 800.000    |")
 print("| 2  | Kursi kantor     |     1     |    Rp 1.200.000   |   Rp 1.200.000   |")
-<<<<<<< HEAD
 garis()
 print("| 3  | Meja belajar     |     1     |    Rp 1.750.000   |   Rp 1.750.000   |")
 
@@ -112,7 +111,6 @@ for index, row in df_display.iterrows():
     print(f"| {row['No']:<2} | {row['Deskripsi Produk']:<18} | {row['Kuantitas']:^9} | {row['Harga Satuan (Rp)']:>17} | {row['Total Harga (Rp)']:>17} |")
 
 garis()
-
 =======
 garis()
 
@@ -191,8 +189,6 @@ for index, row in df_display.iterrows():
     print(f"| {row['No']:<2} | {row['Deskripsi Produk']:<18} | {row['Kuantitas']:^9} | {row['Harga Satuan (Rp)']:>17} | {row['Total Harga (Rp)']:>17} |")
 
 garis()
-
->>>>>>> 62e223cd33efe21dfddd3e2b811172291187e62f
 print(f"| {'Subtotal':<56} : Rp {invoice_subtotal:>15,.0f} |")
 print(f"| {'Diskon':<56} : Rp {diskon:>15,.0f} |")
 print(f"| {'Pajak (5%)':<56} : Rp {pajak:>15,.0f} |")
@@ -203,8 +199,7 @@ garis()
 # Catatan
 print("Catatan:")
 print("- Diskon 10% berlaku untuk pembelian di atas Rp 2.000.000")
-<<<<<<< HEAD
 print("- Pajak 5% dikenakan sesuai peraturan yang berlaku")
-=======
 print("- Pajak 5% dikenakan sesuai peraturan yang berlaku")
->>>>>>> 62e223cd33efe21dfddd3e2b811172291187e62f
+print("- Pajak 5% dikenakan sesuai peraturan yang berlaku")
+
