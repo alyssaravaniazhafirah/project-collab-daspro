@@ -40,7 +40,11 @@ jumlah_barang = int(input("Masukkan jumlah barang yang ingin dibeli: "))
 
 for i in range(jumlah_barang):
     print(f"\nBarang ke-{i+1}:")
+
     nama_barang = input("Masukkan nama barang (Printer laserjet/Kursi kantor/Meja belajar): ")
+=======
+    nama_barang = input("Masukkan nama barang (Printer laserjet/Kursi kantor): ")
+
     kuantitas = int(input("kuantitas barang: "))
 
     harga_satuan = 0 
@@ -48,11 +52,12 @@ for i in range(jumlah_barang):
         harga_satuan = 800000
     elif nama_barang == "Kursi kantor":
         harga_satuan = 1200000
+
     elif nama_barang == "Meja belajar":
         harga_satuan = 1750000
     else:
         print("Barang tidak tersedia.")
-        continue 
+        continue
 
     total_harga_item = hitung_total(kuantitas, harga_satuan)
     
