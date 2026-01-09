@@ -47,6 +47,8 @@ for i in range(jumlah_barang):
         harga_satuan = 800000
     elif nama_barang == "Kursi kantor":
         harga_satuan = 1200000
+    elif nama_barang == "Meja kantor":
+        harga_satuan = 1750000
     else:
         print("Barang tidak tersedia.")
         continue 
