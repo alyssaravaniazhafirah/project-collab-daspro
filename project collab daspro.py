@@ -1,12 +1,14 @@
 import pandas as pd
 
-print("              Invoice Tagihan             ")
+print("              Invoice Tagihan              ")
+print(" ")
 
 tanggal_transaksi = input("Masukkan tanggal transaksi: ")
 nomor_invoice = input("Masukkan nomor invoice: ")
 nama_pembeli = input("Masukkan nama pembeli: ")
 alamat_pembeli = input("Masukkan alamat pembeli: ")
-
+nomor_telepon = input("Masukkan nomor telepon pembeli:")
+print(" ")
 
 def garis():
     print("-" * 82) 
@@ -31,7 +33,9 @@ print("| No | Deskripsi Produk | Kuantitas | Harga Satuan (Rp) | Total Harga (Rp
 garis()
 print("| 1  | Printer laserjet |     1     |    Rp 800.000     |    Rp 800.000    |")
 print("| 2  | Kursi kantor     |     1     |    Rp 1.200.000   |   Rp 1.200.000   |")
+print("| 3  | Meja kantor      |     1     |    Rp 1.750.000   |   Rp 1.750.000   |")
 garis()
+
 
 #Input Data ke dalam List 
 data_barang = [] 
@@ -47,6 +51,8 @@ for i in range(jumlah_barang):
         harga_satuan = 800000
     elif nama_barang == "Kursi kantor":
         harga_satuan = 1200000
+    elif nama_barang == "Meja kantor":  
+         harga_satuan = 1750000
     else:
         print("Barang tidak tersedia.")
         continue 
@@ -100,6 +106,10 @@ print(f" Alamat Pembeli    : {alamat_pembeli}")
 # bagian pemisah kolom (header)
 # ==============================================================================
 garis()
+
+
+print("Catatan :- Diskon 10% diberikan untuk pembelian di atas Rp 2.000.000")
+print("        :- pajak 5% dikenakan sesuai peraturan yang berlaku")
 print(f"| {'No':<2} | {'Deskripsi Produk':<18} | {'Kuantitas':^9} | {'Harga Satuan (Rp)':>17} | {'Total Harga (Rp)':>17} |")
 garis()
 
@@ -120,3 +130,4 @@ garis()
 print("Catatan:")
 print("- Diskon 10% berlaku untuk pembelian di atas Rp 2.000.000")
 print("- Pajak 5% dikenakan sesuai peraturan yang berlaku")
+
