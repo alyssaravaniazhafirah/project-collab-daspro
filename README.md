@@ -16,3 +16,5 @@ ALUR
 7. Sistem menghitung pajak sebesar 5% dari subtotal setelah dikurangi diskon.
 8. Sistem menghitung total tagihan akhir (Subtotal - Diskon + Pajak).
 9. Sistem menampilkan dan mencetak invoice yang berisi detail transaksi dan total pembayaran.
+
+![STUDI KASUS PROJECT COLLAB UAS DASPRO 17 1A 12](https://github.com/user-attachments/assets/07b69a8f-bb25-49b1-90c9-5ef25b03f1e7)
